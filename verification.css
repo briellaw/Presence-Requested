@@ -225,7 +225,7 @@ background-image: url("q1 icon.png");
   font-size: 28px;
   margin-bottom: 20px;
   color: #00ff7f;
-  text-shadow: 0 0 10px rgb(136, 0, 23);
+  text-shadow: 0 0 10px rgb(0, 255, 29);
 }
 
 #ending-message {
