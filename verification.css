@@ -1,0 +1,271 @@
+@font-face {
+            font-family: 'Tehee-Regular';
+            src: url("Tehee-Regular.ttf");
+        }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+#game-world {
+  width: 100vw;
+  height: 100vh;
+    background-image: url("/game background.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#mini-him {
+  width: 70px;
+  height: 120px;
+  position: absolute;
+  z-index: 20;
+
+  top: 290px;
+  left: 680px;
+
+  background-image: url("mini him.png");
+  background-size: cover;
+}
+
+#mini-me {
+  width: 70px;
+  height: 120px;
+  position: absolute;
+  z-index: 3;
+
+  top: 90px;
+  left: 200px;
+
+  background-image: url("mini me.png");
+  background-size: cover;
+
+  border-radius: 50%;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+#q1 {
+    background-image: url("q1 icon.png");
+    background-size: cover;
+    width: 100px;
+  height: 90px;
+  position: absolute;
+  z-index: 10;
+
+  top: 150px;
+  left: 450px;
+}
+
+#q2 {
+  background-image: url("q2 icon.png");
+    background-size: cover;
+    width: 100px;
+  height: 90px;
+  position: absolute;
+
+  top: 650px;
+  left: 300px;
+}
+
+
+#q3 {
+ background-image: url("q3 icon.png");
+    background-size: cover;
+    width: 100px;
+  height: 90px;
+  position: absolute;
+
+  top: 222px;
+  left: 1100px;
+}
+
+#q4 {
+background-image: url("q1 icon.png");
+    background-size: cover;
+    width: 100px;
+  height: 90px;
+  position: absolute;
+
+  top: 500px;
+  left: 800px;
+}
+
+.hidden {
+  display: none;
+}
+
+#dialogue-box {
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 320px;
+  padding: 15px;
+
+  background: rgba(0,0,0,0.85);
+  border: 2px solid white;
+  border-radius: 10px;
+
+  color: white;
+  font-family: 'Tehee-Regular';
+}
+
+#dialogue-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#dialogue-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+#submit-answer {
+  margin-top: 10px;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#dialogue-result {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.mcq-btn {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+
+  background: white;
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.mcq-btn:hover {
+  background: lightgray;
+}
+
+#speech-bubble {
+    position: absolute;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.9);
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: 'Tehee-Regular';
+    font-size: 16px;
+    max-width: 150px;
+    z-index: 999;
+
+    transition: top 0.3s ease, left 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+#progress-box {
+    position: absolute;
+    top: 30px;
+    left: 620px;
+
+    padding: 6px 60px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    border-radius: 25px;
+    
+    font-family: 'time new roman';
+    font-size: 12px;
+    color: white ;
+    text-align: center;
+    z-index: 100;
+}
+.glow-progress {
+  color: #00ff7f;
+  text-shadow: 0 0 8px #00ff7f, 0 0 12px #00ff7f;
+  transition: 0.2s ease;
+} 
+
+#ending-screen {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.63);
+  color:#00ff7f;
+  text-align: center;
+  z-index: 999;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-ending {
+  display: flex !important;
+}
+
+#ending-title {
+  font-family: 'tehee-regular';
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 0 10px rgb(136, 0, 23);
+}
+
+#ending-message {
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  color:#00ff7f;
+  max-width: 300px;
+  line-height: 1.6;
+  word-spacing: 6px;
+  letter-spacing: 0.5px;
+}
+
+#invite-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+
+  font-size: 21px;
+  font-family: 'Tehee-Regular';
+
+  background-color: gray;
+  color: white;
+
+  text-shadow:
+    0 0 6px #ffcaf3,
+    0 0 12px #ffcaf3,
+    0 0 18px #ffcaf3;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+#invite-btn:hover {
+  box-shadow:
+    0 0 10px #ffcaf3,
+    0 0 20px #ffcaf3;
+
+  text-shadow:
+    0 0 6px #ffcaf3,
+    0 0 12px #ffcaf3,
+    0 0 18px #ffcaf3;
+}
