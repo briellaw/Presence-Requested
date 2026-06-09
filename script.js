@@ -221,7 +221,7 @@ function showEnding() {
   btn.classList.add("hidden");
 
   const text =
-    "Agent\u00A02108\u00A0confirmed.\nLove\u00A0confirmed.\nWelcome\u00A0Back.";
+    "Agent 2108 confirmed.\nLove confirmed.\nWelcome Back.";
 
   let i = 0;
   msg.innerText = "";
